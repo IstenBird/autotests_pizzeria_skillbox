@@ -22,3 +22,12 @@ class BasePage:
         def move_elem(self, elem):
             actions = ActionChains(self.browser)
             return actions.move_to_element(elem).perform()
+
+    with allure.step('Проверяем значение корзины'):
+        def check_cart_value(self, cart_value_start):
+            self.find(())
+            if cart_value != cart_value_start:
+                return True
+            else:
+                return False
+
